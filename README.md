@@ -49,7 +49,7 @@ Before            |  After
 	<script type="text/javascript">
 	var disableSubmit = false;
 	jQuery('input.wpcf7-submit[type="submit"]').click(function() {
-	    jQuery(':input[type="submit"]').attr('value',"Sending...");
+	    jQuery(':input[type="submit"]').attr('value',"Sending..");
 	    if (disableSubmit == true) {
 	        return false;
 	    }
@@ -58,16 +58,15 @@ Before            |  After
 	})
 	  
 	var wpcf7Elm = document.querySelector( '.wpcf7' );
-	wpcf7Elm.addEventListener( 'wpcf7submit', function( event ) {
+	wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
 	    jQuery(':input[type="submit"]').attr('value',"Sent");
 	    disableSubmit = false;
 	}, false );
 	wpcf7Elm.addEventListener( 'wpcf7invalid', function( event ) {
-	    jQuery(':input[type="submit"]').attr('value',"Submit")
+	    jQuery(':input[type="submit"]').attr('value',"MAKE AN APPOINTMENT")
 	    disableSubmit = false;
 	}, false );
 	</script>
 	<?php
-
-	}
+}
 ```
